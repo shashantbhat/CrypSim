@@ -1,0 +1,90 @@
+/* src/styles/app.css */
+
+/* App wrapper and general layout */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 255, 204, 0.1);
+  box-shadow: var(--border-glow);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+  transition: var(--transition);
+  width: 100%;
+  max-width: 900px;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Flexbox for transaction list */
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Adds space between items */
+  width: 100%;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background to make items stand out */
+  border-radius: 0.5rem;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-amount {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Wallet section alignment */
+.wallet-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Connect wallet button style */
+button.connect-wallet {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+button.connect-wallet:hover {
+  opacity: 0.9;
+}
